@@ -1,4 +1,29 @@
 <section class="grafana-metric-options">
-  <div class="gf-form">
+  <div class="gf-form-inline">
+    <div class="gf-form max-width-15">
+      <span class="gf-form-label width-8">Latitude</span>
+      <input class="gf-form-input"
+             type="number"
+             step="any"
+             ng-model="ctrl.panelCtrl.panel.position.latitude"
+             ng-model-onblur ng-change="ctrl.panelCtrl.refresh()"
+             bs-tooltip="'Reference location latitude'"
+             data-placement="right"
+             required>
+      </input>
+    </div>
+
+    <div class="gf-form max-width-15">
+      <span class="gf-form-label width-8">Longitude</span>
+      <input class="gf-form-input max-width-21"
+             type="number"
+             step="any"
+             ng-model="ctrl.panelCtrl.panel.position.longitude"
+             ng-model-onblur ng-change="ctrl.panelCtrl.refresh()"
+             bs-tooltip="'Reference location longitude'"
+             data-placement="right"
+             required>
+      </input>
+    </div>
   </div>
 </section>
